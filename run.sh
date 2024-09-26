@@ -48,10 +48,7 @@ if [ -z "${PAYMENT_PORT}" ]; then
   exit 1
 fi
 
-cat /opt/nginx.conf >/etc/nginx/nginx.conf
-
-cat /etc/nginx/nginx.conf
-tail -f /dev/null
+cat /opt/nginx.conf | envsubst >/etc/nginx/nginx.conf
 
 nginx -g 'daemon off;'
 
