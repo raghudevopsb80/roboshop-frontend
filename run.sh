@@ -50,7 +50,9 @@ fi
 
 cat /opt/nginx.conf >/etc/nginx/nginx.conf
 
-/usr/local/bin/uwsgi --ini payment.ini
+
+nginx -g daemon off;
+
 
 
 
