@@ -51,7 +51,7 @@ fi
 cat /opt/nginx.conf >/etc/nginx/nginx.conf
 
 
-nginx -g 'daemon off';
+nginx -g 'daemon off;'
 
 
 
